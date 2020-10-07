@@ -1,0 +1,365 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(58, 58, 58, 0.952);
+  overflow: auto;
+}
+
+nav {
+  position: absolute;
+  right: 60%;
+  left: 60%;
+  top: 10px;
+  transform: translate(-100%);
+  width: 319px;
+  display: table;
+  margin-top: 10px;
+}
+
+nav a {
+  position: relative;
+  width: 33.333%;
+  display: table-cell;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.2s ease color;
+}
+
+nav a:before,
+nav a:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.2s ease transform;
+}
+
+nav a:before {
+  top: 0;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+nav a:after {
+  top: 5px;
+  left: 18px;
+  width: 4px;
+  height: 4px;
+}
+
+nav a:nth-child(1):before {
+  background-color: #051937;
+}
+
+nav a:nth-child(1):after {
+  background-color: #a8eb12;
+}
+
+nav a:nth-child(2):before {
+  background-color: #00e2ff;
+}
+
+nav a:nth-child(2):after {
+  background-color: #89ff00;
+}
+
+nav a:nth-child(3):before {
+  background-color: purple;
+}
+
+nav a:nth-child(3):after {
+  background-color: palevioletred;
+}
+
+#indicator {
+  position: absolute;
+  left: 8%;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: 0.2s ease left;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover:before,
+nav a:hover:after {
+  transform: scale(1);
+}
+
+nav a:nth-child(1):hover ~ #indicator {
+  background: linear-gradient(130deg, #051937, #a8eb12);
+}
+
+nav a:nth-child(2):hover ~ #indicator {
+  left: 41%;
+  background: linear-gradient(130deg, #00e2ff, #89ff00);
+}
+
+nav a:nth-child(3):hover ~ #indicator {
+  width: 80px;
+  left: 71%;
+  background: linear-gradient(130deg, purple, palevioletred);
+}
+
+/* logo perpara */
+
+.welcome {
+  top: 80px;
+  left: 81vh;
+  letter-spacing: 18px;
+  font-size: 57.6px;
+  line-height: 64px;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(255, 255, 255);
+  height: 40px;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -28%);
+}
+.welcome:hover {
+  color: black;
+}
+.welcome:before {
+  content: "|";
+  position: absolute;
+  left: -30px;
+  line-height: 64px;
+}
+.welcome:after {
+  content: "|";
+  position: absolute;
+  right: -30px;
+  line-height: 64px;
+}
+.welcome:after,
+.welcome:before {
+  font-family: "Roboto Mono", monospace;
+  color: rgba(0, 0, 0, 0.829);
+  font-weight: 500;
+  font-size: 64px;
+  animation: 2s linear 0s normal none infinite opacity;
+  -webkit-animation: 2s ease-out 0s normal none infinite opacity;
+  -moz-animation: 2s ease-out 0s normal none infinite opacity;
+  -o-animation: 2s ease-out 0s normal none infinite opacity;
+}
+.visible {
+  float: left;
+  font-weight: 600;
+  overflow: hidden;
+  height: 64px;
+}
+.welcome p {
+  display: inline;
+  float: left;
+  margin: 0;
+}
+.welcome ul {
+  margin-top: 0;
+  padding-left: 284px;
+  text-align: left;
+  list-style: none;
+  animation: 6s linear 0s normal none infinite change;
+  -webkit-animation: 6s linear 0s normal none infinite change;
+  -moz-animation: 6s linear 0s normal none infinite change;
+  -o-animation: 6s linear 0s normal none infinite change;
+}
+.welcome ul li {
+  line-height: 64px;
+  margin: 0;
+}
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes change {
+  0% {
+    margin-top: 0;
+  }
+  15% {
+    margin-top: 0;
+  }
+  25% {
+    margin-top: -64px;
+  }
+  40% {
+    margin-top: -64px;
+  }
+  50% {
+    margin-top: -128px;
+  }
+  65% {
+    margin-top: -128px;
+  }
+  75% {
+    margin-top: -64px;
+  }
+  85% {
+    margin-top: -64px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+@keyframes change {
+  0% {
+    margin-top: 0;
+  }
+  15% {
+    margin-top: 0;
+  }
+  25% {
+    margin-top: -64px;
+  }
+  40% {
+    margin-top: -64px;
+  }
+  50% {
+    margin-top: -128px;
+  }
+  65% {
+    margin-top: -128px;
+  }
+  75% {
+    margin-top: -64px;
+  }
+  85% {
+    margin-top: -64px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+#container {
+  z-index: 111;
+}
+@media screen and (max-width: 600px) {
+  .welcome {
+    font-size: 40.6px;
+    left: 67%;
+  }
+}
+/* The hero image */
+.hero-image {
+  position: relative;
+  z-index: -1;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(88, 86, 86, 0.5)),
+    url("https://content.asos-media.com/-/media/homepages/mw/2020/04-gbl/27/mw_global_pastels_hero_1258x600.jpg");
+
+  height: 100vh;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  font-size: 4em;
+  line-height: 64px;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn1 {
+  display: block;
+  position: absolute;
+  font-family: "Roboto Mono", monospace;
+  font-size: 40px;
+  width: 4em;
+  text-align: center;
+  bottom: 100px;
+  right: 60%;
+  left: 60%;
+  transform: translate(-100%);
+}
+.btn1 {
+  border: 2px solid white;
+  text-decoration: none;
+  color: white;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.btn::before {
+  background: #000000;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+.btn1::before {
+  width: 0%;
+  height: 100%;
+}
+
+.btn1:before {
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .welcome {
+    font-size: 20px;
+    left: 60%;
+  }
+  .hero-text {
+    font-size: 45px;
+    left: 57%;
+  }
+  .btn {
+    font-size: 40px;
+    width: 4em;
+    margin: 0 0 0 80px;
+    margin-top: -50%;
+    text-align: center;
+  }
+  nav {
+    right: 0;
+    left: 3.2em;
+  }
+  .btn1 {
+    left: 50%;
+    right: 50%;
+    transform: translate(-40%);
+    padding: 0;
+  }
+}
