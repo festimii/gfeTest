@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <base href=".">
+      <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="/resources/tutorial/css/example.css"
+      />
+    </head>
+    <link rel="stylesheet" href="../css/sidenav.css" />
+    <link rel="stylesheet" href="../css/account.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet prefetch"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.js"
+      integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <body style="overflow: auto">
+    <div id="nav" class="nav">
+      <div class="icon">
+        <ul>
+          <li>
+            <a  title="Home" href="../index.html"><i class="fa fa-home"></i></a>
+          </li> 
+          <li>
+            <a class="Out" title="User" href="#"><i class="fa fa-user"></i></a>
+          </li>
+          <li>
+            <a  href="About"><i class="fa fa-search"></i></a>
+          </li>
+          <li>
+            <a class="in" href="account.html"><i class="fa fa-edit"></i></a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="hey">
+        <ul>
+          <li><a title="Home" href="#">recherché</a></li>
+          <li class="Out"><a class="Out"  title="User" href="#"><span style="font-size: 15px;" class="User"></span></a></li>
+          <li class="in"><a class="in" href="#">Search</a></li>
+          <li class="in"><a class="in" href="account.html">Login&Signup</a></li>
+          <li class="Out"><a class="Out" id="logout" href="#">LogOut</a></li>
+        </ul>
+      </div>
+    </div>
+
+   
+
+    <div class="form-structor">
+      <form id="signup-s">
+        <div class="signup">
+          <h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
+          <div class="form-holder">
+            <p hidden="true" id="msg">Account Created</p>
+            <input type="email" id="email-sig" class="input" placeholder="Email" />
+            <input type="password" id="password-sig" class="input" placeholder="Password" />
+          </div>
+          <button type="submit" class="submit-btn">Sign up</button>
+        </div>
+      </form>
+      <form id="login-s">
+        <div class="login slide-up">
+          <div class="center">
+            <h2 class="form-title" id="login"><span>or</span>Log in</h2>
+            <div class="form-holder">
+              <input type="email" id="email" class="input" placeholder="Email" />
+              <input type="password" id="password" class="input" placeholder="Password" />
+            </div>
+            <button id="submit-btn" class="submit-btn">Log in</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="/__/firebase/7.22.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="/__/firebase/7.22.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="/__/firebase/7.22.1/firebase-auth.js"></script>
+    <script src="/__/firebase/7.22.1/firebase-firestore.js"></script>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/signup.js" ></script>
+    <script src="../js/login.js" ></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

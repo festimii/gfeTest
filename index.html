@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="sidenav.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sidenav.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
@@ -25,34 +26,37 @@
     <div class="hero-image"></div>
     <nav class="heyhey">
       <a href="index.html">HOME</a>
-      <a href="man.html">MAN</a>
-      <a href="women.html">WOMEN</a>
+      <a href="./html/man.html">MAN</a>
+      <a href="./html/women.html">WOMEN</a>
       <div id="indicator"></div>
+      
     </nav>
     <div id="nav" class="nav">
       <div class="icon">
         <ul>
           <li>
-            <a title="Home" href="index.html"><i class="fa fa-home"></i></a>
+            <a  title="Home" href="index.html"><i class="fa fa-home"></i></a>
+          </li> 
+          <li>
+            <a class="Out" title="User"><i class="fa fa-user"></i></a>
           </li>
           <li>
-            <a href="About"><i class="fa fa-search"></i></a>
+            <a  href="About"><i class="fa fa-search"></i></a>
           </li>
-          <li>
-            <a href="account.html"><i class="fa fa-edit"></i></a>
+          <li class="out">
+            <a class="out" href="./html/account.html"><i class="fa fa-edit"></i></a>
           </li>
-          <li>
-            <a href="#"><i class="fa fa-cog"></i></a>
-          </li>
+          
         </ul>
       </div>
 
       <div class="hey">
         <ul>
           <li><a title="Home" href="#">recherché</a></li>
-          <li><a href="#">Search</a></li>
-          <li><a href="account.html">Account</a></li>
-          <li><a href="#">Settings</a></li>
+          <li class="Out"><a class="Out"  title="User"><span style="font-size: 15px;" class="User"></span></a></li>
+          <li ><a  href="#">Search</a></li>
+          <li class="in"><a class="in" href="./html/account.html">Login&Signup</a></li>
+          <li class="Out"><a class="Out" id="logout" href="#">LogOut</a></li>
         </ul>
       </div>
     </div>
@@ -65,5 +69,23 @@
     <div class="shop">
       <a href="" class="btn1 btn3">SHOP NOW</a>
     </div>
+
+
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="/__/firebase/7.22.1/firebase-app.js"></script>
+
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="/__/firebase/7.22.1/firebase-analytics.js"></script>
+    
+        <!-- Add Firebase products that you want to use -->
+        <script src="/__/firebase/7.22.1/firebase-auth.js"></script>
+        <script src="/__/firebase/7.22.1/firebase-firestore.js"></script>
+    
+        <script src="./js/main.js"></script>
+        <script src="./js/signup.js" ></script>
+        <script src="./js/login.js" ></script>
+        <script src="./js/logout.js"></script>
+        <script src="./js/app.js"></script>
+       
   </body>
 </html>
